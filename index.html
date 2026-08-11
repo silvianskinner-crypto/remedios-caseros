@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="80 remedios caseros simples para el bienestar diario, con ingredientes de tu cocina. Libro digital.">
+<title>80 Remedios Caseros para el Bienestar Diario</title>
+<style>
+  :root{
+    --verde:#173d17; --verde2:#2f5d2f; --crema:#fdf6e3; --crema2:#f6eecd;
+    --dorado:#b08a3a; --texto:#26331f; --suave:#5b6a52;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--texto);background:var(--crema);line-height:1.65;font-size:19px}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:Georgia,serif;color:var(--verde);line-height:1.2}
+  .eyebrow{letter-spacing:3px;text-transform:uppercase;font-size:15px;color:var(--dorado);font-weight:bold}
+  a.btn{display:inline-block;background:var(--verde);color:#fff;text-decoration:none;font-weight:bold;
+    font-size:22px;padding:20px 40px;border-radius:10px;box-shadow:0 6px 18px rgba(23,61,23,.28);transition:.15s}
+  a.btn:hover{background:var(--verde2);transform:translateY(-2px)}
+  .btn small{display:block;font-size:14px;font-weight:normal;opacity:.9;margin-top:4px}
+  /* HERO */
+  .hero{background:linear-gradient(180deg,var(--crema) 0%,var(--crema2) 100%);padding:56px 0 44px;text-align:center}
+  .hero img{width:290px;max-width:70%;border-radius:8px;box-shadow:0 16px 40px rgba(23,61,23,.28);margin:26px 0}
+  .hero h1{font-size:40px;margin:14px 0 10px}
+  .hero .sub{font-size:22px;color:var(--suave);max-width:640px;margin:0 auto 8px}
+  .price{font-size:20px;margin:22px 0 6px}
+  .price b{font-size:34px;color:var(--verde)}
+  .price s{color:#a06;opacity:.6}
+  .garantia-mini{font-size:16px;color:var(--suave);margin-top:12px}
+  /* SECCIONES */
+  section{padding:46px 0;border-bottom:1px solid #e8dcb8}
+  section h2{font-size:30px;text-align:center;margin-bottom:8px}
+  section .lead{text-align:center;color:var(--suave);max-width:620px;margin:0 auto 26px;font-size:20px}
+  .pains{list-style:none;max-width:640px;margin:0 auto}
+  .pains li{background:#fff;border-left:4px solid var(--dorado);padding:16px 20px;margin:12px 0;border-radius:6px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px;margin:0 auto}
+  .card{background:#fff;border-radius:10px;padding:22px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .card h3{font-size:21px;margin-bottom:6px}
+  .card p{font-size:17px;color:var(--suave)}
+  .secciones{max-width:640px;margin:22px auto 0}
+  .secciones .row{display:flex;align-items:center;gap:14px;background:#fff;border-radius:8px;padding:14px 18px;margin:10px 0;box-shadow:0 3px 10px rgba(0,0,0,.04);font-size:19px}
+  .secciones .n{font-family:Georgia,serif;font-size:26px;color:var(--dorado);font-weight:bold;min-width:34px}
+  .bullets{max-width:640px;margin:0 auto;list-style:none}
+  .bullets li{padding:10px 0 10px 34px;position:relative;font-size:19px}
+  .bullets li:before{content:"\2713";position:absolute;left:0;color:var(--verde);font-weight:bold;font-size:22px}
+  /* GARANTIA */
+  .garantia{background:var(--verde);color:#fdf6e3;text-align:center}
+  .garantia h2{color:#fff}
+  .garantia .sello{display:inline-block;border:3px solid var(--dorado);border-radius:50%;width:130px;height:130px;
+    line-height:1.1;padding-top:34px;font-weight:bold;color:#fff;margin:6px 0 18px}
+  .garantia .sello b{display:block;font-size:40px;color:var(--dorado)}
+  .garantia p{max-width:600px;margin:0 auto;color:#e8dcb8;font-size:19px}
+  /* OFERTA */
+  .oferta{text-align:center;background:var(--crema2)}
+  .oferta .box{background:#fff;max-width:520px;margin:0 auto;border-radius:14px;padding:34px 28px;box-shadow:0 12px 34px rgba(23,61,23,.14);border:2px solid #ecdfb3}
+  .oferta .box img{width:120px;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,.18);margin-bottom:10px}
+  .oferta .box h3{font-size:24px;margin-bottom:8px}
+  /* FAQ */
+  .faq{max-width:680px;margin:0 auto}
+  .faq details{background:#fff;border-radius:8px;padding:16px 20px;margin:10px 0;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+  .faq summary{cursor:pointer;font-weight:bold;color:var(--verde);font-size:19px;list-style:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq p{margin-top:10px;color:var(--suave);font-size:18px}
+  /* FOOTER */
+  footer{background:#efe6c9;color:#6b6a52;font-size:14px;line-height:1.55;text-align:center;padding:30px 0}
+  footer .wrap{max-width:700px}
+  .marca{letter-spacing:3px;color:var(--verde);font-weight:bold;margin-bottom:10px;font-size:16px}
+  @media(max-width:640px){
+    body{font-size:18px} .hero h1{font-size:30px} .grid{grid-template-columns:1fr}
+    section h2{font-size:25px} a.btn{font-size:20px;padding:18px 26px}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">El Hogar Natural</div>
+    <img src="portada.jpg" alt="80 Remedios Caseros para el Bienestar Diario">
+    <h1>Los remedios de la abuela, todos en un solo libro</h1>
+    <p class="sub">80 remedios caseros simples para las molestias de todos los días, hechos con lo que ya tienes en la cocina. Pensado para personas a partir de los 50 años.</p>
+    <div class="price">Precio de lanzamiento: <b>US$ 9,99</b></div>
+    <a class="btn" href="https://go.hotmart.com/A107078835J">Quiero mi libro ahora <small>Acceso inmediato &middot; PDF descargable</small></a>
+    <div class="garantia-mini">✔ Pago único &nbsp;·&nbsp; ✔ Acceso inmediato &nbsp;·&nbsp; ✔ Lo lees en el celular, la tablet o impreso</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>¿Te suena familiar?</h2>
+    <p class="lead">Las pequeñas molestias de todos los días, esas que muchas veces te dicen que “son cosa de la edad”.</p>
+    <ul class="pains">
+      <li>Te despiertas a las tres de la mañana y te cuesta volver a dormir.</li>
+      <li>La comida te cae pesada y quedas con el estómago incómodo.</li>
+      <li>Las piernas se sienten cansadas e hinchadas al final del día.</li>
+      <li>Un dolor de cabeza, la garganta irritada cuando llega el frío, poca energía por la mañana.</li>
+    </ul>
+    <p class="lead" style="margin-top:24px">No siempre necesitas algo complicado. A veces basta con un remedio sencillo, de los de siempre.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Qué es este libro</h2>
+    <p class="lead">Una colección de <b>80 remedios caseros suaves</b>, de los que tu abuela conocía y nadie escribió. Son medidas de alivio y bienestar, no tratamientos médicos, para ayudarte a sentirte un poco mejor y un poco más acompañado en el día a día.</p>
+    <ul class="bullets">
+      <li>Ingredientes que ya tienes en casa: miel, jengibre, manzanilla, limón, avena, canela.</li>
+      <li>Nada de polvos raros ni suplementos que pedir por internet.</li>
+      <li>Organizado por cómo te sientes, para ir directo a lo que necesitas.</li>
+      <li>Cada remedio con un aviso de seguridad honesto: qué cuidar y cuándo consultar a tu médico.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Las 7 secciones</h2>
+    <p class="lead">80 remedios organizados por problema cotidiano.</p>
+    <div class="secciones">
+      <div class="row"><span class="n">1</span> Sueño y calma nocturna</div>
+      <div class="row"><span class="n">2</span> Digestión y bienestar después de comer</div>
+      <div class="row"><span class="n">3</span> Piernas cansadas, pesadas e hinchadas</div>
+      <div class="row"><span class="n">4</span> Circulación y manos y pies calientes</div>
+      <div class="row"><span class="n">5</span> Energía diaria y frescura matinal</div>
+      <div class="row"><span class="n">6</span> Dolores de cabeza y tensión cotidiana</div>
+      <div class="row"><span class="n">7</span> Apoyo para la temporada de resfriados</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Cada receta, clara y fácil de seguir</h2>
+    <div class="grid">
+      <div class="card"><h3>Ingredientes</h3><p>Todo lo que necesitas, con medidas claras.</p></div>
+      <div class="card"><h3>Preparación</h3><p>Pasos cortos y numerados, sin complicaciones.</p></div>
+      <div class="card"><h3>Cómo usar</h3><p>Cuándo tomarlo y en qué cantidad.</p></div>
+      <div class="card"><h3>Seguridad</h3><p>Una nota honesta en cada receta. Tu seguridad va primero.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="oferta">
+  <div class="wrap">
+    <h2>Llévalo hoy</h2>
+    <div class="box">
+      <img src="portada.jpg" alt="Portada del libro">
+      <h3>80 Remedios Caseros para el Bienestar Diario</h3>
+      <div class="price">Precio de lanzamiento: <b>US$ 9,99</b></div>
+      <p style="color:var(--suave);font-size:17px;margin:6px 0 18px">Pago único. Acceso inmediato al PDF, para leer en cualquier dispositivo o imprimir.</p>
+      <a class="btn" href="https://go.hotmart.com/A107078835J">Comprar ahora por US$ 9,99</a>
+      <div class="garantia-mini" style="margin-top:14px">✔ Acceso inmediato &nbsp;·&nbsp; ✔ Compra segura por Hotmart</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq">
+      <details><summary>¿Cómo recibo el libro?</summary><p>Es un libro digital (PDF). Apenas se confirma tu compra, recibes el acceso por correo para descargarlo al instante y leerlo en el celular, la tablet o la computadora. Si prefieres, también puedes imprimirlo.</p></details>
+      <details><summary>¿Sirve si tomo medicamentos o tengo alguna condición de salud?</summary><p>Los remedios son medidas caseras de alivio, no tratamientos médicos. Cada uno trae un aviso de seguridad. Consulta siempre a tu médico o farmacéutico antes de probar cualquiera, sobre todo si tomas medicamentos o tienes alguna condición de salud.</p></details>
+      <details><summary>¿Reemplaza al médico?</summary><p>No. Este libro no diagnostica, ni trata, ni cura ninguna enfermedad, y nunca reemplaza a tu médico ni a los remedios que te hayan recetado. Es un acompañante para las pequeñas molestias del día a día.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="oferta" style="border-bottom:none">
+  <div class="wrap">
+    <h2>Empieza esta misma noche</h2>
+    <p class="lead">Un remedio sencillo puede ser todo lo que necesitas para sentirte un poco mejor.</p>
+    <a class="btn" href="https://go.hotmart.com/A107078835J">Quiero mi libro por US$ 9,99</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="marca">EL HOGAR NATURAL</div>
+    <p>Este libro tiene fines únicamente educativos e informativos. Los remedios descritos son medidas caseras tradicionales de alivio y bienestar, no tratamientos médicos, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consulta siempre a un profesional de la salud antes de probar cualquier remedio, especialmente si estás embarazada o amamantando, tomas medicamentos o tienes alguna condición de salud. En caso de emergencia, llama al número de emergencias de tu país.</p>
+    <p style="margin-top:12px">© 2026 El Hogar Natural · Venta procesada de forma segura por Hotmart.</p>
+  </div>
+</footer>
+
+</body>
+</html>
